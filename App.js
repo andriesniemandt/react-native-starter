@@ -1,19 +1,21 @@
-import { createAppContainer } from "react-navigation";
-import { createStackNavigator } from "react-navigation-stack";
+import {createAppContainer} from "react-navigation";
+import {createStackNavigator} from "react-navigation-stack";
 import HomeScreen from "./src/screens/HomeScreen";
 import CustomComponent from "./src/screens/ComponentsScreen";
+import ListScreen from "./src/screens/ListScreen";
 
 const navigator = createStackNavigator(
-  {
-    Home: HomeScreen,
-    Custom: CustomComponent
-  },
-  {
-    initialRouteName: "Custom",
-    defaultNavigationOptions: {
-      title: "App",
+    {
+        Home: HomeScreen,
+        Custom: CustomComponent,
+        List: ListScreen
     },
-  }
+    {
+        initialRouteName: "Home",
+        defaultNavigationOptions: {
+            title: "App",
+        },
+    }
 );
 
 export default createAppContainer(navigator);
