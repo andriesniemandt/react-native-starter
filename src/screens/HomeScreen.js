@@ -8,9 +8,12 @@ const HomeScreen = ({navigation}) => {
             <Button
                 onPress={() => navigation.navigate("List")}
                 title={"List Component"}/>
-            <TouchableOpacity onPress={() => navigation.navigate("Custom")}>
-                <Text>Custom Component</Text>
-            </TouchableOpacity>
+            <Button
+                onPress={() => navigation.navigate("Custom")}
+                title={"Custom Component"}/>
+            <Button
+                onPress={() => navigation.navigate("Image")}
+                title={"Image Demo"}/>
         </View>
     )
 };
